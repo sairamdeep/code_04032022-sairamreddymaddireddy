@@ -55,3 +55,14 @@ def testCheckForColumns(df:pd.DataFrame):
     else:
         print('Features missing in the input data,please check the data')
         exit(1)
+
+def doListTests(bin_list : list,bmi_category:list,health_risk_category: list):
+    '''
+    code for executing multiple tests
+    
+    '''
+    for _list in [bin_list,bmi_category,health_risk_category]:
+        testNanInList(_list)
+        testStringsInList(_list)
+        testDuplicatesInList(_list)
+    testBinCounts(bin_list,bmi_category,health_risk_category)
