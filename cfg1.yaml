@@ -1,0 +1,25 @@
+# Input config for BMI calculator
+# data dir should be w.r.t cfg file
+data_dir : 'data1.txt'
+bmi_bins :
+- 18.4999
+- 24.999
+- 29.999
+- 34.999
+- 39.999
+
+bmi_category :
+- 'Underweight'
+- 'Normal weight'
+- 'Overweight'
+- 'Moderately obese'
+- 'Severely obese'
+- 'Very severely obese'
+
+health_risk_category :
+- 'Malnutrition risk'
+- 'Low risk'
+- 'Enhanced risk'
+- 'Medium risk'
+- 'High risk'
+- 'Very high risk'
