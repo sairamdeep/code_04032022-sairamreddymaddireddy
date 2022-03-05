@@ -3,7 +3,8 @@ import numpy as np
 import pandas as pd
 import yaml
 import json
-
+import test_code
+from sys import exit
 
 class BMICalculator:   
     
@@ -12,12 +13,14 @@ class BMICalculator:
         #loading config from yaml file 
         self.config=self.yaml_load(cfg_path)
         
+        #validating the lists in config file
+        test_code.doListTests(self.config['bmi_bins'],self.config['bmi_category'],self.config['bmi_category'])
         #extending bmi bins from -inf to inf
         self.bmi_bins = self.extendBins(self.config['bmi_bins'])
         
         #assigning config values to class object
         self.bmi_category = self.config['bmi_category']
-        self.health_risk_category = self.config['health_risk_category']
+        self.health_risk_category = self.config['bmi_category']
         
         #reading json data into dataframe
         self.df= self.readData(self.config['data_dir'])
@@ -69,7 +72,9 @@ class BMICalculator:
             print(ex)
             print('Cannot convert json into dataframe, please check the data file')
             exit(0)
-            
+
+        #validating the data
+        test_code.testCheckForColumns(data)
         data=self.dataprep(data.copy())
         
         return data
@@ -98,6 +103,10 @@ class BMICalculator:
             print(ex)
             exit(0)
 
+        print('NaNs in the data : ',df.isna().sum().sum())
+        print('Dropping NaNs in the data, if any')
+        df.dropna(inplace=True)
+        
         return df
 
     def getBMICategories(self) -> pd.Series:
