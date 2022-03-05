@@ -3,9 +3,11 @@ import numpy as np
 import pandas as pd
 import yaml
 import json
-import test_code
 from sys import exit
-
+try:
+    from bmicalculator import test_code
+except Exception as ex:
+    import test_code
 class BMICalculator:   
     
     def __init__(self,cfg_path):#, file_path):
