@@ -1,4 +1,4 @@
-# code_04032022-sairamreddymaddireddy
+# packaging-python-code
 BMI Calculator  
 ## Documentation
 * Steps to install the package (in Linux)
