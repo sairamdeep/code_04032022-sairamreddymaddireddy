@@ -8,7 +8,7 @@ BMI Calculator
   * Install wheel package using pip
     * ``` pip install wheel ```
   * Install package from git using pip 
-    * ```python -m pip install git+https://github.com/sairamdeep/code_04032022-sairamreddymaddireddy.git ```  
+    * ```python -m pip install git+https://github.com/sairamdeep/packaging-python-code.git ```  
 * Steps to run the package
   * Prepare the cfg.yaml
     * <img src="https://user-images.githubusercontent.com/22652457/156877123-d514fba4-bbe5-447c-83a7-2e58cef06360.png"  width="400" height="300"> 
