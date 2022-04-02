@@ -1,4 +1,5 @@
 # packaging-python-code
+This code gives an overview for building custom python libraries.
 BMI Calculator  
 ## Documentation
 * Steps to install the package (in Linux)
