@@ -1,6 +1,8 @@
 # packaging-python-code
-This code gives an overview for building custom python libraries.
-BMI Calculator  
+An overview for building custom python libraries.
+## BMI Calculator  
+This code takes in the input config file which contains weight,height of a person and health risk categories for given BMI range.
+Outputs the count of persons in the specified health risk category
 ## Documentation
 * Steps to install the package (in Linux)
   * Create virtual environment using venv (https://docs.python.org/3/library/venv.html)
